@@ -9,11 +9,11 @@
   </link>
   <joint name="world" type="fixed">
     <parent link="world"/>
-    <child link="base_link"/>
+    <child link="fr3_base_link"/>
   </joint>
   
   <link
-    name="base_link">
+    name="fr3_base_link">
     <inertial>
       <origin
         xyz="-0.00049027 -0.00045095 0.032527"
@@ -53,7 +53,7 @@
     </collision>
   </link>
   <link
-    name="j1_Link">
+    name="fr3_j1_Link">
     <inertial>
       <origin
         xyz="-3.8658E-07 -0.0024176 0.13519"
@@ -93,15 +93,15 @@
     </collision>
   </link>
   <joint
-    name="j1"
+    name="fr3_j1"
     type="revolute">
     <origin
       xyz="0 0 0"
       rpy="0 0 0" />
     <parent
-      link="base_link" />
+      link="fr3_base_link" />
     <child
-      link="j1_Link" />
+      link="fr3_j1_Link" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -122,7 +122,7 @@
       k_velocity="10" />
   </joint>
   <link
-    name="j2_Link">
+    name="fr3_j2_Link">
     <inertial>
       <origin
         xyz="-0.14111 3.4656E-06 0.11053"
@@ -162,15 +162,15 @@
     </collision>
   </link>
   <joint
-    name="j2"
+    name="fr3_j2"
     type="revolute">
     <origin
       xyz="0 0 0.14"
       rpy="1.5708 0 0" />
     <parent
-      link="j1_Link" />
+      link="fr3_j1_Link" />
     <child
-      link="j2_Link" />
+      link="fr3_j2_Link" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -191,7 +191,7 @@
       k_velocity="10" />
   </joint>
   <link
-    name="j3_Link">
+    name="fr3_j3_Link">
     <inertial>
       <origin
         xyz="-0.18987 5.2268E-06 0.0034145"
@@ -231,15 +231,15 @@
     </collision>
   </link>
   <joint
-    name="j3"
+    name="fr3_j3"
     type="revolute">
     <origin
       xyz="-0.28 0 0"
       rpy="0 0 0" />
     <parent
-      link="j2_Link" />
+      link="fr3_j2_Link" />
     <child
-      link="j3_Link" />
+      link="fr3_j3_Link" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -260,7 +260,7 @@
       k_velocity="10" />
   </joint>
   <link
-    name="j4_Link">
+    name="fr3_j4_Link">
     <inertial>
       <origin
         xyz="4.5665E-07 -0.0034666 0.098292"
@@ -300,15 +300,15 @@
     </collision>
   </link>
   <joint
-    name="j4"
+    name="fr3_j4"
     type="revolute">
     <origin
       xyz="-0.24001 0 0"
       rpy="0 0 0" />
     <parent
-      link="j3_Link" />
+      link="fr3_j3_Link" />
     <child
-      link="j4_Link" />
+      link="fr3_j4_Link" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -329,7 +329,7 @@
       k_velocity="10" />
   </joint>
   <link
-    name="j5_Link">
+    name="fr3_j5_Link">
     <inertial>
       <origin
         xyz="-4.5262E-07 0.0034666 0.098292"
@@ -369,15 +369,15 @@
     </collision>
   </link>
   <joint
-    name="j5"
+    name="fr3_j5"
     type="revolute">
     <origin
       xyz="0 0 0.102"
       rpy="1.5708 0 0" />
     <parent
-      link="j4_Link" />
+      link="fr3_j4_Link" />
     <child
-      link="j5_Link" />
+      link="fr3_j5_Link" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -398,7 +398,7 @@
       k_velocity="10" />
   </joint>
   <link
-    name="j6_Link">
+    name="fr3_j6_Link">
     <inertial>
       <origin
         xyz="7.559E-05 1.3858E-05 0.076619"
@@ -438,15 +438,15 @@
     </collision>
   </link>
   <joint
-    name="j6"
+    name="fr3_j6"
     type="revolute">
     <origin
       xyz="0 0 0.102"
       rpy="-1.5708 0 0" />
     <parent
-      link="j5_Link" />
+      link="fr3_j5_Link" />
     <child
-      link="j6_Link" />
+      link="fr3_j6_Link" />
     <axis
       xyz="0 0 1" />
     <limit
@@ -467,7 +467,7 @@
       k_velocity="10" />
   </joint>
   <link
-    name="tool_Link">
+    name="fr3_tool_Link">
     <inertial>
       <origin
         xyz="0.24412 0.079181 -0.126"
@@ -487,8 +487,7 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://frcobot_description/meshes/fr3v6/visual/tool_Link.STL" />
+        <box size="0 0 0" />
       </geometry>
       <material
         name="">
@@ -501,21 +500,21 @@
         xyz="0 0 0"
         rpy="0 0 0" />
       <geometry>
-        <mesh
-          filename="package://frcobot_description/meshes/fr3v6/collision/tool_Link.STL" />
+        <box size="0 0 0" />
+
       </geometry>
     </collision>
   </link>
   <joint
-    name="tool"
+    name="fr3_tool"
     type="fixed">
     <origin
       xyz="0 0 0.1"
       rpy="0 0 0" />
     <parent
-      link="j6_Link" />
+      link="fr3_j6_Link" />
     <child
-      link="tool_Link" />
+      link="fr3_tool_Link" />
     <axis
       xyz="0 0 1" />
     <limit

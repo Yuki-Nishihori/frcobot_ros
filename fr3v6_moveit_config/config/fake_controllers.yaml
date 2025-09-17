@@ -2,12 +2,12 @@ controller_list:
   - name: fake_fr3v6_arm_controller
     type: $(arg fake_execution_type)
     joints:
-      - j1
-      - j2
-      - j3
-      - j4
-      - j5
-      - j6
+      - fr3_j1
+      - fr3_j2
+      - fr3_j3
+      - fr3_j4
+      - fr3_j5
+      - fr3_j6
 initial:  # Define initial robot poses.
   - group: fr3v6_arm
     pose: zero
